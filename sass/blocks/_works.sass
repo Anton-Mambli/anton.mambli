@@ -1,0 +1,162 @@
+.works
+    &-full
+        img
+            max-width: 600px
+            width: 100%
+    p.remark
+        +head
+        font-size: 20px
+        i
+           color: #d35400 
+    
+    &-list
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        &__item
+            flex-basis: 48%
+            position: relative
+            z-index: 9999
+            margin-bottom: 30px
+            box-shadow: 5px 0 10px rgba(0,0,0,.4), -5px 0 10px rgba(0,0,0,.4)
+            transition: all 0.5s
+            &:nth-child(1)
+                flex-basis: 100%
+            &:nth-child(4)
+                flex-basis: 100%
+            &:nth-child(2) .works-overlay
+                background: #d35400
+            &:nth-child(1) .works-overlay
+                background: #3F9CE4
+                
+            &:nth-child(3) .works-overlay
+                background: #fe3e65
+                
+            &:nth-child(4) .works-overlay
+                background: #ff8400
+               
+            &:nth-child(5) .works-overlay
+                background: #59516a
+            &:nth-child(6) .works-overlay
+                background: #232b2b
+            &:nth-child(7) .works-overlay
+                background: #507fe1
+            &:nth-child(8) .works-overlay
+                background: rgb(41, 128, 185);
+            &:hover
+                transform: scale(1.1)
+                box-shadow: 15px 0 40px rgba(0,0,0,.4), -15px 0 40px rgba(0,0,0,.4)
+            &:hover .works-overlay
+                opacity: 1
+            &:hover .ribbon
+                opacity: 0    
+            &:hover .works-info
+                
+                opacity: 1
+            img
+                width: 100%
+                height: 350px
+                object-fit: cover
+                display: block
+    &-overlay
+        position: absolute
+        
+        height: 100%
+        width: 100%
+        opacity: 0
+        transition: opacity 0.5s
+        
+    &-info
+        position: absolute
+        top: 50%
+        left: 50%
+        opacity: 0
+       
+        transform: translate(-50%, -50%)
+        width: 100%
+        padding: 10px 20px
+        transition: all 0.5s
+        z-index: 900
+        &__title
+            a
+                +head
+                font-size: 25px
+                color: white !important
+        &__desc
+            font-size: 16px
+            color: white
+            p
+                font-weight: bold
+                +head 
+            ul
+                a
+                    color: white !important
+                    font-weight: bold
+                    +head
+                    
+                    line-height: 1
+                    i
+                        font-size: 20px
+                        line-height: 1
+
+
+.ribbon-wrapper
+	width: 108px 
+	height: 108px 
+	overflow: hidden 
+	position: absolute 
+	top: -6px 
+	right: -6px 
+.ribbon 
+	font-size: 14px 
+	line-height: 18px 
+	color: #333 
+	text-align: center 
+	text-transform: uppercase 
+	-webkit-transform: rotate(45deg) 
+	-moz-transform: rotate(45deg) 
+	-ms-transform: rotate(45deg) 
+	-o-transform: rotate(45deg) 
+	position: relative 
+	padding: 7px 0 
+	left: -4px 
+	top: 26px 
+	width: 150px 
+	background-color: #232b2b
+	color: #fff
+    +head 
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) 
+	letter-spacing: 0.5px 
+	box-shadow: -3px 5px 6px -5px rgba(0, 0, 0, 0.5) 
+	outline: 1px dashed #fff 
+	outline-offset: -4px 
+	&:before 
+		content: "" 
+		position: absolute 
+		left: 0px 
+		top: 100% 
+		z-index: -1 
+		border-left: 4px solid #4e7c7d 
+		border-right: 4px solid transparent 
+		border-bottom: 4px solid transparent 
+		border-top: 4px solid #4e7c7d 
+	&:after 
+		content: "" 
+		position: absolute 
+		right: 7px 
+		top: 100% 
+		z-index: -1 
+		border-left: 4px solid transparent 
+		border-right: 4px solid #4e7c7d 
+		border-bottom: 4px solid transparent 
+		border-top: 4px solid #4e7c7d 
+.ribbon:before, .ribbon:after 
+	content: "" 
+	border-top: 4px solid #4e7c7d 
+	border-left: 4px solid transparent 
+	border-right: 4px solid transparent 
+	position: absolute 
+	bottom: -4px 
+

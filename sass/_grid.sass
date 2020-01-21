@@ -1,0 +1,47 @@
+*
+    box-sizing: border-box
+
+
+       
+.container-wrapper
+    overflow-x: hidden    
+.container
+    max-width: 1170px
+    margin: auto
+
+
+main
+    width: calc(100% - 300px)
+    float: right
+    z-index: 9999
+    height: 100%
+    position: relative
+    & > i.fa-bars
+        color: white
+        font-size: 30px
+        cursor: pointer
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 99999
+        display: none
+        
+  
+
+
+
+body
+    position: relative
+
+@media (max-width: 1199px)
+    .container
+        max-width: 960px
+
+@media (max-width: 991px)
+    .container
+        max-width: 750px
+
+@media (max-width: 768px)
+    .container
+        max-width: 100%
+        padding: 0 20px
